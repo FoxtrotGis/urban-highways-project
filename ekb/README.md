@@ -9,13 +9,13 @@
 
 ### [RU]
 * **Топологическая точность**: Оцифровка границ проезжей части (`road_polygons`) и пешеходных коридоров (`pedestrian_crossings`) стык в стык с использованием ГИС-снаппинга. Полностью изолированы прилегающие территории (АЗС) и дворовые выезды по линии бордюрного камня.
-* **Траекторный граф (`lane_centers`)**: Проложены сглаженные центральные линии полос движения. Математически корректно разведены зоны слияния потоков и перекрещивания траекторий (X-crossings) без создания ложных склеенных узлов.
-* **Семантическое наполнение**: База данных структурирована с использованием международных стандартов (OpenStreetMap/Lanelet2). Каждому вектору присвоен валидный атрибут направления (`forward` / `backward`).
+* **Траекторный граф (`lane_centers`)**: Проложены сглаженные центральные линии полос движения. Зоны слияния потоков и пересечения траекторий (X-crossings) размечены раздельными сегментами линий, чтобы избежать самопересечений в графе.
+* **Семантическое наполнение**: Атрибутивная модель вдохновлена подходом OpenStreetMap к разметке направления движения (forward/backward).
 
 ### [EN]
 * **Topological Accuracy**: Digitized road boundaries (`road_polygons`) and pedestrian corridors (`pedestrian_crossings`) edge-to-edge using GIS snapping. Adjoining territories (gas stations) and backyard exits are fully isolated along the curb line.
-* **Routing Graph (`lane_centers`)**: Plotted smoothed lane centerlines. Traffic merging zones and path intersections (X-crossings) are mathematically separated without creating false connected nodes.
-* **Semantic Attributes**: The database structure complies with global standards (OpenStreetMap/Lanelet2). Every vector is populated with a valid direction attribute (`forward` / `backward`).
+* **Routing Graph** (`lane_centers`): Plotted smoothed lane centerlines. Merging zones and path intersections (X-crossings) are split into separate line segments to avoid self-intersections in the graph.
+* **Semantic Attributes**: Attribute modeling is inspired by the OpenStreetMap approach to direction tagging. Every vector is populated with a direction attribute (`forward` / `backward`).
 
 ---
 
